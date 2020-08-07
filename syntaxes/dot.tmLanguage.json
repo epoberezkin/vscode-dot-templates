@@ -1,0 +1,71 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "doT template",
+  "patterns": [
+    {
+      "include": "#interpolate"
+    },
+    {
+      "include": "#encode"
+    },
+    {
+      "include": "#iterate"
+    },
+    {
+      "include": "#conditional"
+    },
+    {
+      "include": "#defineMacro"
+    },
+    {
+      "include": "#useMacro"
+    },
+    {
+      "include": "#evaluate"
+    }
+  ],
+  "repository": {
+    "interpolate": {
+      "begin": "\\{\\{=",
+      "end": "\\}\\}",
+      "name": "storage.type.interpolate.template.dot",
+      "patterns": [{"include": "source.js"}]
+    },
+    "encode": {
+      "begin": "\\{\\{([a-z_$]+[\\w$]*)?!",
+      "end": "\\}\\}",
+      "name": "storage.type.encode.template.dot",
+      "patterns": [{"include": "source.js"}]
+    },
+    "iterate": {
+      "begin": "\\{\\{~",
+      "end": "\\}\\}",
+      "name": "keyword.control.iterate.template.dot"
+    },
+    "conditional": {
+      "begin": "\\{\\{\\?{1,2}",
+      "end": "\\}\\}",
+      "name": "keyword.control.conditional.template.dot",
+      "patterns": [{"include": "source.js"}]
+    },
+    "defineMacro": {
+      "begin": "\\{\\{\\#\\#",
+      "end": "\\}\\}",
+      "name": "storage.type.define.template.dot",
+      "patterns": [{"include": "source.dot"}]
+    },
+    "useMacro": {
+      "begin": "\\{\\{\\#",
+      "end": "\\}\\}",
+      "name": "storage.type.define.template.dot",
+      "patterns": [{"include": "source.js"}]
+    },
+    "evaluate": {
+      "begin": "\\{\\{\\s",
+      "end": "\\}\\}",
+      "name": "storage.type.evaluate.template.dot",
+      "patterns": [{"include": "source.js"}]
+    }
+  },
+  "scopeName": "source.dot"
+}

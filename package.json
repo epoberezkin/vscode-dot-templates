@@ -1,0 +1,36 @@
+{
+  "name": "vscode-dot-templates",
+  "displayName": "doT templates",
+  "description": "VS Code Syntax highlighting for doT templates",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.47.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "dot",
+        "aliases": [
+          "doT template",
+          "dot"
+        ],
+        "extensions": [
+          ".dot",
+          ".def",
+          ".jst"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "dot",
+        "scopeName": "source.dot",
+        "path": "./syntaxes/dot.tmLanguage.json"
+      }
+    ]
+  }
+}
